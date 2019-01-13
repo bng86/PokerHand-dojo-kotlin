@@ -6,7 +6,7 @@ import org.junit.Test
 class PokerHandGameTest {
 
     @Test
-    fun test_straight_flush_win_four_of_a_kind() {
+    fun test_player1_andy_straight_flush_win_player2_merry_four_of_a_kind() {
         val cards1 = listOf(
             Card("CA"),
             Card("C2"),
