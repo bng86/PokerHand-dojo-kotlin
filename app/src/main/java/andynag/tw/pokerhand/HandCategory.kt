@@ -8,5 +8,6 @@ enum class HandCategory {
     Straight,
     ThreeOfAKind,
     TwoPair,
-    OnePair
+    OnePair,
+    HighCard
 }

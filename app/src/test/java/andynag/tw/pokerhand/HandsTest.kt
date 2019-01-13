@@ -124,4 +124,19 @@ class HandsTest {
         val excepted : HandCategory = HandCategory.OnePair
         Assert.assertEquals(excepted, actual)
     }
+
+    @Test
+    fun test_high_card() {
+        val cards = listOf(
+            Card("CA"),
+            Card("D3"),
+            Card("C5"),
+            Card("C7"),
+            Card("C9")
+        )
+        val hands = Hands()
+        val actual: HandCategory = hands.getHandCategory(cards)
+        val excepted : HandCategory = HandCategory.HighCard
+        Assert.assertEquals(excepted, actual)
+    }
 }
