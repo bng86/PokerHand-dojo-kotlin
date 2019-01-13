@@ -7,7 +7,8 @@ class Hands {
         FourOfAKindMatcher(),
         FullHouseMatcher(),
         FlushMatcher(),
-        StraightMatcher()
+        StraightMatcher(),
+        ThreeOfAKindMatcher()
     )
 
     fun getHandCategory(cards: List<Card>): HandCategory {
