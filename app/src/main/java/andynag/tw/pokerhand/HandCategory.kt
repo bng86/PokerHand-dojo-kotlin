@@ -1,5 +1,6 @@
 package andynag.tw.pokerhand
 
 enum class HandCategory {
-    StraightFlush
+    StraightFlush,
+    FourOfAKind
 }
