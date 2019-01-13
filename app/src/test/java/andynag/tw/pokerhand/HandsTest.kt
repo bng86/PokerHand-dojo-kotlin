@@ -14,8 +14,8 @@ class HandsTest {
             Card("S4"),
             Card("S5")
         )
-        val hands = Hands(cards)
-        val actual: HandCategory = hands.getHandCategory()
+        val hands = Hands()
+        val actual: HandCategory = hands.getHandCategory(cards)
         val excepted : HandCategory = HandCategory.StraightFlush
         Assert.assertEquals(excepted, actual)
     }
