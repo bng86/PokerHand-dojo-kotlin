@@ -64,4 +64,19 @@ class HandsTest {
         val excepted : HandCategory = HandCategory.Flush
         Assert.assertEquals(excepted, actual)
     }
+
+    @Test
+    fun test_straight() {
+        val cards = listOf(
+            Card("CA"),
+            Card("D2"),
+            Card("H3"),
+            Card("C4"),
+            Card("C5")
+        )
+        val hands = Hands()
+        val actual: HandCategory = hands.getHandCategory(cards)
+        val excepted : HandCategory = HandCategory.Straight
+        Assert.assertEquals(excepted, actual)
+    }
 }
