@@ -79,4 +79,19 @@ class HandsTest {
         val excepted : HandCategory = HandCategory.Straight
         Assert.assertEquals(excepted, actual)
     }
+
+    @Test
+    fun test_three_of_a_kind() {
+        val cards = listOf(
+            Card("CA"),
+            Card("DA"),
+            Card("HA"),
+            Card("C5"),
+            Card("D4")
+        )
+        val hands = Hands()
+        val actual: HandCategory = hands.getHandCategory(cards)
+        val excepted : HandCategory = HandCategory.ThreeOfAKind
+        Assert.assertEquals(excepted, actual)
+    }
 }
