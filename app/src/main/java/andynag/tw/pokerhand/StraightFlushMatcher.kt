@@ -1,8 +1,12 @@
 package andynag.tw.pokerhand
 
-class StraightFlushMatcher {
+class StraightFlushMatcher : HandsCategoryMatcher {
 
-    fun isMatch(cards: List<Card>): Boolean {
+    override fun getHandsCategory(): HandCategory {
+        return HandCategory.StraightFlush
+    }
+
+    override fun isMatch(cards: List<Card>): Boolean {
         return isStraight(cards) && isFlush(cards)
     }
 

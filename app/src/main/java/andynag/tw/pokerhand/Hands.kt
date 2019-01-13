@@ -2,16 +2,13 @@ package andynag.tw.pokerhand
 
 class Hands {
 
-    private val straightFlushMatcher = StraightFlushMatcher()
-    private val fourOfAKindMatcher = FourOfAKindMatcher()
+    private val matchers = listOf(
+        StraightFlushMatcher(),
+        FourOfAKindMatcher()
+    )
 
     fun getHandCategory(cards: List<Card>): HandCategory {
-        if (straightFlushMatcher.isMatch(cards)) {
-            return HandCategory.StraightFlush
-        } else if (fourOfAKindMatcher.isMatch(cards)) {
-            return HandCategory.FourOfAKind
-        } else {
-            TODO("not implement")
-        }
+        val handsCategory: HandCategory? = matchers.firstOrNull { it.isMatch(cards) }?.getHandsCategory()
+        return handsCategory ?: throw Exception("known hands category exception")
     }
 }
