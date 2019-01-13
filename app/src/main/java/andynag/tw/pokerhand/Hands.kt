@@ -5,7 +5,8 @@ class Hands {
     private val matchers = listOf(
         StraightFlushMatcher(),
         FourOfAKindMatcher(),
-        FullHouseCategory()
+        FullHouseMatcher(),
+        FlushMatcher()
     )
 
     fun getHandCategory(cards: List<Card>): HandCategory {

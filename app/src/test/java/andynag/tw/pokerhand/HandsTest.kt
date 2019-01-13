@@ -54,10 +54,10 @@ class HandsTest {
     fun test_flush() {
         val cards = listOf(
             Card("CA"),
-            Card("D3"),
-            Card("H5"),
+            Card("C3"),
+            Card("C5"),
             Card("C7"),
-            Card("D9")
+            Card("C9")
         )
         val hands = Hands()
         val actual: HandCategory = hands.getHandCategory(cards)

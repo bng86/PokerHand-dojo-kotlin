@@ -1,6 +1,6 @@
 package andynag.tw.pokerhand
 
-class FullHouseCategory : HandsCategoryMatcher {
+class FullHouseMatcher : HandsCategoryMatcher {
 
     override fun isMatch(cards: List<Card>): Boolean {
         val groupPoint = cards.groupBy { it.getPoints() }

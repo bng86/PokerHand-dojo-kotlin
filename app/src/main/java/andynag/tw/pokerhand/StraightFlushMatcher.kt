@@ -2,15 +2,15 @@ package andynag.tw.pokerhand
 
 class StraightFlushMatcher : HandsCategoryMatcher {
 
+    private val flushMatcher = FlushMatcher()
+
     override fun getHandsCategory(): HandCategory {
         return HandCategory.StraightFlush
     }
 
     override fun isMatch(cards: List<Card>): Boolean {
-        return isStraight(cards) && isFlush(cards)
+        return isStraight(cards) && flushMatcher.isMatch(cards)
     }
-
-    private fun isFlush(cards: List<Card>) = cards.distinctBy { it.getSuit() }.count() == 1
 
     private fun isStraight(cards: List<Card>): Boolean {
         val allDifference = cards.distinctBy { it.getPoints() }.count() == 5
