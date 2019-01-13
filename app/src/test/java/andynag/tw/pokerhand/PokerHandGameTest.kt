@@ -48,4 +48,16 @@ class PokerHandGameTest {
 
         Assert.assertEquals("Merry win, because of StraightFlush", winner.toString())
     }
+
+    @Test
+    fun test_player1_straight_flush_win_player2_straight_flush() {
+
+        val player1 = Player("Andy", straightFlushHands)
+        val player2 = Player("Merry", straightFlushHands)
+
+        val pokerHandGame = PokerHandGame(player1, player2)
+        val winner = pokerHandGame.getWinner()
+
+        Assert.assertEquals("Draw, because of StraightFlush", winner.toString())
+    }
 }
