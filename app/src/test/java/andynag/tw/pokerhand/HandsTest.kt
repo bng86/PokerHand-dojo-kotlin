@@ -14,8 +14,8 @@ class HandsTest {
             Card("S4"),
             Card("S5")
         )
-        val hands = Hands()
-        val actual: HandCategory = hands.getHandCategory(cards)
+        val hands = Hands(cards)
+        val actual: HandCategory = hands.getHandCategory()
         val excepted : HandCategory = HandCategory.StraightFlush
         Assert.assertEquals(excepted, actual)
     }
@@ -29,8 +29,8 @@ class HandsTest {
             Card("SA"),
             Card("S5")
         )
-        val hands = Hands()
-        val actual: HandCategory = hands.getHandCategory(cards)
+        val hands = Hands(cards)
+        val actual: HandCategory = hands.getHandCategory()
         val excepted : HandCategory = HandCategory.FourOfAKind
         Assert.assertEquals(excepted, actual)
     }
@@ -44,8 +44,8 @@ class HandsTest {
             Card("C5"),
             Card("D5")
         )
-        val hands = Hands()
-        val actual: HandCategory = hands.getHandCategory(cards)
+        val hands = Hands(cards)
+        val actual: HandCategory = hands.getHandCategory()
         val excepted : HandCategory = HandCategory.FullHouse
         Assert.assertEquals(excepted, actual)
     }
@@ -59,8 +59,8 @@ class HandsTest {
             Card("C7"),
             Card("C9")
         )
-        val hands = Hands()
-        val actual: HandCategory = hands.getHandCategory(cards)
+        val hands = Hands(cards)
+        val actual: HandCategory = hands.getHandCategory()
         val excepted : HandCategory = HandCategory.Flush
         Assert.assertEquals(excepted, actual)
     }
@@ -74,8 +74,8 @@ class HandsTest {
             Card("C4"),
             Card("C5")
         )
-        val hands = Hands()
-        val actual: HandCategory = hands.getHandCategory(cards)
+        val hands = Hands(cards)
+        val actual: HandCategory = hands.getHandCategory()
         val excepted : HandCategory = HandCategory.Straight
         Assert.assertEquals(excepted, actual)
     }
@@ -89,8 +89,8 @@ class HandsTest {
             Card("CK"),
             Card("CA")
         )
-        val hands = Hands()
-        val actual: HandCategory = hands.getHandCategory(cards)
+        val hands = Hands(cards)
+        val actual: HandCategory = hands.getHandCategory()
         val excepted : HandCategory = HandCategory.Straight
         Assert.assertEquals(excepted, actual)
     }
@@ -104,8 +104,8 @@ class HandsTest {
             Card("C5"),
             Card("D4")
         )
-        val hands = Hands()
-        val actual: HandCategory = hands.getHandCategory(cards)
+        val hands = Hands(cards)
+        val actual: HandCategory = hands.getHandCategory()
         val excepted : HandCategory = HandCategory.ThreeOfAKind
         Assert.assertEquals(excepted, actual)
     }
@@ -119,8 +119,8 @@ class HandsTest {
             Card("C3"),
             Card("D3")
         )
-        val hands = Hands()
-        val actual: HandCategory = hands.getHandCategory(cards)
+        val hands = Hands(cards)
+        val actual: HandCategory = hands.getHandCategory()
         val excepted : HandCategory = HandCategory.TwoPair
         Assert.assertEquals(excepted, actual)
     }
@@ -134,8 +134,8 @@ class HandsTest {
             Card("C4"),
             Card("D5")
         )
-        val hands = Hands()
-        val actual: HandCategory = hands.getHandCategory(cards)
+        val hands = Hands(cards)
+        val actual: HandCategory = hands.getHandCategory()
         val excepted : HandCategory = HandCategory.OnePair
         Assert.assertEquals(excepted, actual)
     }
@@ -149,8 +149,8 @@ class HandsTest {
             Card("C7"),
             Card("C9")
         )
-        val hands = Hands()
-        val actual: HandCategory = hands.getHandCategory(cards)
+        val hands = Hands(cards)
+        val actual: HandCategory = hands.getHandCategory()
         val excepted : HandCategory = HandCategory.HighCard
         Assert.assertEquals(excepted, actual)
     }

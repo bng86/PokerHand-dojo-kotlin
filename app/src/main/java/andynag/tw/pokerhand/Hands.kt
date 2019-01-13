@@ -2,7 +2,7 @@ package andynag.tw.pokerhand
 
 import andynag.tw.pokerhand.matcher.*
 
-class Hands {
+class Hands(val cards: List<Card>) {
 
     private val matchers = listOf(
         StraightFlushMatcher(),
@@ -15,8 +15,8 @@ class Hands {
         OnePairMatcher()
     )
 
-    fun getHandCategory(cards: List<Card>): HandCategory {
-        val handsCategory: HandCategory? = matchers.firstOrNull { it.isMatch(cards) }?.getHandsCategory()
+    fun getHandCategory(): HandCategory {
+        val handsCategory: HandCategory? = matchers.firstOrNull { it.isMatch(this.cards) }?.getHandsCategory()
         return handsCategory ?: HandCategory.HighCard
     }
 }
