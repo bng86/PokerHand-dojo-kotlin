@@ -7,6 +7,7 @@ class Card(private val inputString: String) {
             "C" -> SuitType.Clubs
             "D" -> SuitType.Diamonds
             "H" -> SuitType.Hearts
+            "S" -> SuitType.Spades
             else -> TODO("unknown suit type")
         }
     }
@@ -17,6 +18,7 @@ class Card(private val inputString: String) {
             "J" -> 11
             "Q" -> 12
             "K" -> 13
+            "A" -> 1
             else -> TODO("unknown points")
         }
 
