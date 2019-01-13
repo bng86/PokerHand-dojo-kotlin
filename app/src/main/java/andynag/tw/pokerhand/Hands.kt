@@ -2,11 +2,14 @@ package andynag.tw.pokerhand
 
 class Hands {
 
-    private val categoryMatcher = StraightFlushMatcher()
+    private val straightFlushMatcher = StraightFlushMatcher()
+    private val fourOfAKindMatcher = FourOfAKindMatcher()
 
     fun getHandCategory(cards: List<Card>): HandCategory {
-        if (categoryMatcher.isMatch(cards)) {
+        if (straightFlushMatcher.isMatch(cards)) {
             return HandCategory.StraightFlush
+        } else if (fourOfAKindMatcher.isMatch(cards)) {
+            return HandCategory.FourOfAKind
         } else {
             TODO("not implement")
         }
