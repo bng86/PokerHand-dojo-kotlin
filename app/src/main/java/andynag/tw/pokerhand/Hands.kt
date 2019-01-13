@@ -1,5 +1,7 @@
 package andynag.tw.pokerhand
 
+import andynag.tw.pokerhand.matcher.*
+
 class Hands {
 
     private val matchers = listOf(

@@ -1,4 +1,7 @@
-package andynag.tw.pokerhand
+package andynag.tw.pokerhand.matcher
+
+import andynag.tw.pokerhand.Card
+import andynag.tw.pokerhand.HandCategory
 
 class ThreeOfAKindMatcher : HandsCategoryMatcher {
 
