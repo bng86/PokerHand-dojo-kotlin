@@ -26,7 +26,7 @@ class PokerHandGameTest {
     )
 
     @Test
-    fun test_player1_andy_straight_flush_win_player2_merry_four_of_a_kind() {
+    fun test_player1_straight_flush_win_player2_four_of_a_kind() {
 
         val player1 = Player("Andy", straightFlushHands)
         val player2 = Player("Merry", fourOfAKindHands)
@@ -35,5 +35,17 @@ class PokerHandGameTest {
         val winner = pokerHandGame.getWinner()
 
         Assert.assertEquals("Andy win, because of StraightFlush", winner.toString())
+    }
+
+    @Test
+    fun test_player2_straight_flush_win_player1_four_of_a_kind() {
+
+        val player1 = Player("Andy", straightFlushHands)
+        val player2 = Player("Merry", fourOfAKindHands)
+
+        val pokerHandGame = PokerHandGame(player1, player2)
+        val winner = pokerHandGame.getWinner()
+
+        Assert.assertEquals("Merry win, because of StraightFlush", winner.toString())
     }
 }
