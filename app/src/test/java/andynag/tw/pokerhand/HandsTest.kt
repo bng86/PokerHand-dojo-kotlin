@@ -81,6 +81,21 @@ class HandsTest {
     }
 
     @Test
+    fun test_straight_10JQKA() {
+        val cards = listOf(
+            Card("C10"),
+            Card("CJ"),
+            Card("HQ"),
+            Card("CK"),
+            Card("CA")
+        )
+        val hands = Hands()
+        val actual: HandCategory = hands.getHandCategory(cards)
+        val excepted : HandCategory = HandCategory.Straight
+        Assert.assertEquals(excepted, actual)
+    }
+
+    @Test
     fun test_three_of_a_kind() {
         val cards = listOf(
             Card("CA"),
