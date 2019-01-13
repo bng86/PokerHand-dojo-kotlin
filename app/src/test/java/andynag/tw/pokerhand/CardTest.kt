@@ -31,4 +31,13 @@ class CardTest {
         Assert.assertEquals(SuitType.Hearts, actualSuitType)
         Assert.assertEquals(13, card.getPoints())
     }
+
+    @Test
+    fun test_spadesA() {
+        val card = Card("SA")
+        val actualSuitType: SuitType = card.getSuit()
+
+        Assert.assertEquals(SuitType.Spades, actualSuitType)
+        Assert.assertEquals(1, card.getPoints())
+    }
 }
