@@ -6,5 +6,6 @@ enum class HandCategory {
     FullHouse,
     Flush,
     Straight,
-    ThreeOfAKind
+    ThreeOfAKind,
+    TwoPair
 }
