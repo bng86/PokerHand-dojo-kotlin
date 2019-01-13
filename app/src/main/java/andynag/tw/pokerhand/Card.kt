@@ -14,7 +14,7 @@ class Card(private val inputString: String) {
 
     fun getPoints(): Int {
         val pointsString = inputString.substring(1)
-        return when (pointsString) {
+        return pointsString.toIntOrNull() ?: when (pointsString) {
             "J" -> 11
             "Q" -> 12
             "K" -> 13
