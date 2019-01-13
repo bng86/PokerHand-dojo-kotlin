@@ -13,4 +13,13 @@ class CardTest {
         Assert.assertEquals(SuitType.Clubs, actualSuitType)
         Assert.assertEquals(11, card.getPoints())
     }
+
+    @Test
+    fun test_diamondsQ() {
+        val card = Card("DQ")
+        val actualSuitType: SuitType = card.getSuit()
+
+        Assert.assertEquals(SuitType.Diamonds, actualSuitType)
+        Assert.assertEquals(12, card.getPoints())
+    }
 }
