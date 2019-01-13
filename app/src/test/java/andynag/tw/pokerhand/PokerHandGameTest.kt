@@ -40,8 +40,8 @@ class PokerHandGameTest {
     @Test
     fun test_player2_straight_flush_win_player1_four_of_a_kind() {
 
-        val player1 = Player("Andy", straightFlushHands)
-        val player2 = Player("Merry", fourOfAKindHands)
+        val player1 = Player("Andy", fourOfAKindHands)
+        val player2 = Player("Merry", straightFlushHands)
 
         val pokerHandGame = PokerHandGame(player1, player2)
         val winner = pokerHandGame.getWinner()

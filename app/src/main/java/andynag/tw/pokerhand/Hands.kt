@@ -20,6 +20,10 @@ class Hands(val cards: List<Card>) {
         return handsCategory ?: HandCategory.HighCard
     }
 
+    operator fun compareTo(hands: Hands): Int {
+        return this.getHandCategory().value.compareTo(hands.getHandCategory().value)
+    }
+
     override fun equals(other: Any?): Boolean {
         if (this === other) return true
         if (javaClass != other?.javaClass) return false
