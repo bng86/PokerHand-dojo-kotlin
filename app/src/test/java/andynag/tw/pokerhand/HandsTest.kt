@@ -34,4 +34,19 @@ class HandsTest {
         val excepted : HandCategory = HandCategory.FourOfAKind
         Assert.assertEquals(excepted, actual)
     }
+
+    @Test
+    fun test_full_house() {
+        val cards = listOf(
+            Card("CA"),
+            Card("DA"),
+            Card("HA"),
+            Card("C5"),
+            Card("D5")
+        )
+        val hands = Hands()
+        val actual: HandCategory = hands.getHandCategory(cards)
+        val excepted : HandCategory = HandCategory.FullHouse
+        Assert.assertEquals(excepted, actual)
+    }
 }
