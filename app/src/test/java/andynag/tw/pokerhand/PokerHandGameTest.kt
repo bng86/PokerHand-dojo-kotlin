@@ -26,7 +26,7 @@ class PokerHandGameTest {
     )
 
     @Test
-    fun test_player1_straight_flush_win_player2_four_of_a_kind() {
+    fun test_player1_win_player2_because_of_hands_category() {
 
         val player1 = Player("Andy", straightFlushHands)
         val player2 = Player("Merry", fourOfAKindHands)
@@ -38,7 +38,7 @@ class PokerHandGameTest {
     }
 
     @Test
-    fun test_player2_straight_flush_win_player1_four_of_a_kind() {
+    fun test_player2_win_player1_because_of_hands_category() {
 
         val player1 = Player("Andy", fourOfAKindHands)
         val player2 = Player("Merry", straightFlushHands)
@@ -50,7 +50,7 @@ class PokerHandGameTest {
     }
 
     @Test
-    fun test_player1_straight_flush_win_player2_straight_flush() {
+    fun test_draw_because_of_hands_category() {
 
         val player1 = Player("Andy", straightFlushHands)
         val player2 = Player("Merry", straightFlushHands)
