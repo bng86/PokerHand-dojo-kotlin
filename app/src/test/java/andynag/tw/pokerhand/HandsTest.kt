@@ -1,0 +1,22 @@
+package andynag.tw.pokerhand
+
+import org.junit.Assert
+import org.junit.Test
+
+class HandsTest {
+
+    @Test
+    fun test_straight_flush() {
+        val cards = listOf(
+            Card("SA"),
+            Card("S2"),
+            Card("S3"),
+            Card("S4"),
+            Card("S5")
+        )
+        val hands = Hands(cards)
+        val actual: HandCategory = hands.getHandCategory()
+        val excepted : HandCategory = HandCategory.StraightFlush
+        Assert.assertEquals(excepted, actual)
+    }
+}
