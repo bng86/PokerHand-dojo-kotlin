@@ -29,6 +29,6 @@ class PokerHandGameTest {
         val pokerHandGame = PokerHandGame(player1, player2)
         val winner = pokerHandGame.getWinner()
 
-        Assert.assertEquals("Andy win, because of Straight Flush", winner.toString())
+        Assert.assertEquals("Andy win, because of StraightFlush", winner.toString())
     }
 }

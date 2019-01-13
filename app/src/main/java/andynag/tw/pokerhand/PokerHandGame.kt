@@ -1,11 +1,15 @@
 package andynag.tw.pokerhand
 
-class PokerHandGame(player1: Player, player2: Player) {
+class PokerHandGame(private val player1: Player, private val player2: Player) {
+
     fun getWinner(): Winner {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        return Winner(player1.name, player1.hands.getHandCategory())
     }
 }
 
-class Winner {
+data class Winner(val name: String, val handCategory: HandCategory) {
 
+    override fun toString(): String {
+        return "$name win, because of $handCategory"
+    }
 }
