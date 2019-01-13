@@ -109,4 +109,19 @@ class HandsTest {
         val excepted : HandCategory = HandCategory.TwoPair
         Assert.assertEquals(excepted, actual)
     }
+
+    @Test
+    fun test_one_pair() {
+        val cards = listOf(
+            Card("CA"),
+            Card("DA"),
+            Card("H3"),
+            Card("C4"),
+            Card("D5")
+        )
+        val hands = Hands()
+        val actual: HandCategory = hands.getHandCategory(cards)
+        val excepted : HandCategory = HandCategory.OnePair
+        Assert.assertEquals(excepted, actual)
+    }
 }
