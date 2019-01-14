@@ -1,5 +1,7 @@
 package andynag.tw.pokerhand
 
+import andynag.tw.pokerhand.compare.StraightFlushComparer
+
 class PokerHandGame(private val player1: Player, private val player2: Player) {
 
     fun getWinner(): Winner {
