@@ -5,31 +5,15 @@ import org.junit.Test
 
 class PokerHandGameTest {
 
-    private val straightFlushHands = Hands(
-        listOf(
-            Card("CA"),
-            Card("C2"),
-            Card("C3"),
-            Card("C4"),
-            Card("C5")
-        )
-    )
+    private val straightFlush = "CA,C2,C3,C4,C5"
 
-    private val fourOfAKindHands = Hands(
-        listOf(
-            Card("CA"),
-            Card("DA"),
-            Card("HA"),
-            Card("SA"),
-            Card("C5")
-        )
-    )
+    private val fourOfAKind = "CA,DA,HA,SA,C2"
 
     @Test
     fun test_player1_win_player2_because_of_hands_category() {
 
-        val player1 = Player("Andy", straightFlushHands)
-        val player2 = Player("Merry", fourOfAKindHands)
+        val player1 = Player("Andy", straightFlush)
+        val player2 = Player("Merry", fourOfAKind)
 
         val pokerHandGame = PokerHandGame(player1, player2)
         val winner = pokerHandGame.getWinner()
@@ -40,8 +24,8 @@ class PokerHandGameTest {
     @Test
     fun test_player2_win_player1_because_of_hands_category() {
 
-        val player1 = Player("Andy", fourOfAKindHands)
-        val player2 = Player("Merry", straightFlushHands)
+        val player1 = Player("Andy", fourOfAKind)
+        val player2 = Player("Merry", straightFlush)
 
         val pokerHandGame = PokerHandGame(player1, player2)
         val winner = pokerHandGame.getWinner()
@@ -52,8 +36,8 @@ class PokerHandGameTest {
     @Test
     fun test_draw_because_of_hands_category() {
 
-        val player1 = Player("Andy", straightFlushHands)
-        val player2 = Player("Merry", straightFlushHands)
+        val player1 = Player("Andy", straightFlush)
+        val player2 = Player("Merry", straightFlush)
 
         val pokerHandGame = PokerHandGame(player1, player2)
         val winner = pokerHandGame.getWinner()

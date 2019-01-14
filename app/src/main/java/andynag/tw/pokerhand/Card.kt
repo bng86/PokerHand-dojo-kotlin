@@ -1,6 +1,6 @@
 package andynag.tw.pokerhand
 
-class Card(private val inputString: String) {
+data class Card(private val inputString: String) {
     fun getSuit(): SuitType {
         val suitString = inputString.substring(0, 1)
         return when (suitString) {
@@ -21,6 +21,5 @@ class Card(private val inputString: String) {
             "A" -> 1
             else -> TODO("unknown points")
         }
-
     }
 }
